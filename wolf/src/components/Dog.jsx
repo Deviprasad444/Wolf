@@ -1,19 +1,23 @@
 import React from 'react'
-import {Canvas ,useThree} from '@react-three/fiber'
+import {Canvas, useThree} from '@react-three/fiber'
+import {OrbitControls, useGLTF} from '@react-three/drei'
 
 const Dog =() =>{
-
-    useThree(({camera, scene, gl})=>{
+    const model= useGLTF('/models/dog.drc.glb')
+    useThree(({camera, scene, gl}) =>{
         console.log(camera.position)
-
     })
-    return(
     
-            <mesh>
-                <meshBasicMaterial color ={0x00FF00}/>
-                <boxGeometry args ={[1,1,1]}/>
-            </mesh>
 
+    return(
+    <>
+    <primitive object={model.scene} />
+    <OrbitControls/>
+    
+    </>
     )
 }
+
+useGLTF.preload('/models/dog.drc.glb')
+
 export default Dog

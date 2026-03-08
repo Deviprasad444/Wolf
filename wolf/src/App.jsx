@@ -7,9 +7,10 @@ function App() {
   return (
     <>
     <Canvas>
-         <Dog/>
+      <directionalLight position ={[0, 2, 5]} intensity ={10}/>
+      <Dog/>
     </Canvas>
-  
+
     </>
   )
 }
