@@ -14,6 +14,7 @@ const Dog =() =>{
 
     return(
     <>
+    <p> hello this is me</p>
     <primitive object={model.scene} position ={[0.2, -0.5, 0]} rotation ={[0, Math.PI/3, 0]} />
     <OrbitControls/>
     
