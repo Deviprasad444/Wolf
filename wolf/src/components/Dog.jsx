@@ -6,12 +6,15 @@ const Dog =() =>{
     const model= useGLTF('/models/dog.drc.glb')
     useThree(({camera, scene, gl}) =>{
         console.log(camera.position)
+        camera.position.z =1
+        
+        
     })
     
 
     return(
     <>
-    <primitive object={model.scene} />
+    <primitive object={model.scene} position ={[0.2, -0.5, 0]} rotation ={[0, Math.PI/3, 0]} />
     <OrbitControls/>
     
     </>
