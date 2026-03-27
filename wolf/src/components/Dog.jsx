@@ -2,6 +2,9 @@ import React ,{useEffect} from 'react'
 import * as three from 'three'
 import {Canvas, useThree} from '@react-three/fiber'
 import {OrbitControls, useGLTF, useTexture, useAnimations} from '@react-three/drei'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
 const Dog =() =>{
     const model= useGLTF('/models/dog.drc.glb')
