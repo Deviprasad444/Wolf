@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing:border-box;
 }
-html,body,#root{
+html,body,
+#root{
   width:100%;
   background-color:black;
 
@@ -15,4 +16,6 @@ main{
 section{
   min-height:100vh;
   border:2px solid white;
+  position:relative;
+  z-index:2;
 }
